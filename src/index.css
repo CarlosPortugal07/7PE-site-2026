@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-sans text-ink bg-white leading-relaxed;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2.5 min-h-[46px] px-5 py-3 border-0 rounded-lg font-extrabold cursor-pointer transition-all duration-200 text-center whitespace-normal select-none;
+  }
+  .btn:hover {
+    @apply -translate-y-0.5;
+  }
+  .btn-primary {
+    @apply bg-gold text-[#241605] shadow-[0_12px_24px_rgba(242,170,46,0.28)];
+  }
+  .btn-primary:hover {
+    @apply bg-[#ffc257];
+  }
+  .btn-dark {
+    @apply bg-navy text-white shadow-[0_12px_24px_rgba(16,35,63,0.22)];
+  }
+  .btn-dark:hover {
+    @apply bg-[#183456];
+  }
+  .btn-light {
+    @apply bg-white text-navy border border-line;
+  }
+  .icon-box {
+    @apply w-10 h-10 rounded-lg inline-flex items-center justify-center bg-mint-50 text-mint-700 mb-4;
+  }
+  .card {
+    @apply bg-white border border-line rounded-lg;
+  }
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-mint-700 text-[0.82rem] font-extrabold uppercase tracking-wide mb-2.5;
+  }
+  .section-title {
+    @apply font-display text-navy leading-tight;
+    font-size: clamp(2rem, 5vw, 3.15rem);
+  }
+  .section-lead {
+    @apply max-w-[720px] text-muted text-lg mt-4;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
