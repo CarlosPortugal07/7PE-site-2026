@@ -37,7 +37,7 @@ export default function Header() {
     >
       <div className="w-[min(1160px,calc(100%-32px))] mx-auto flex items-center justify-between gap-6 min-h-[76px]">
         <a href="#" className="flex items-center gap-3 no-underline min-w-0" aria-label="7PE Portugal Engenharia Elétrica">
-          <span className="font-display text-navy text-xl font-bold tracking-tight">7PE</span>
+          <span className="font-display text-navy text-xl font-bold tracking-tight">9PE</span>
           <span className="hidden sm:inline text-navy text-sm font-semibold tracking-wide">
             Portugal Engenharia
           </span>
