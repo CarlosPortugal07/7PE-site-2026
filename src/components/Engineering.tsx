@@ -32,9 +32,10 @@ export default function Engineering() {
             Você fala com quem entende o sistema, não só com quem vende.
           </h2>
           <p className="section-lead">
-            Como a empresa está iniciando sua carteira de sistemas fotovoltaicos, a
-            confiança precisa vir de fundamentos reais: formação técnica, processo,
-            transparência e responsabilidade no dimensionamento.
+            A cada projeto, aplicamos rigor tecnico: analise de consumo, estudo de
+            sombreamento, compatibilidade com a rede e dimensionamento responsavel.
+            Assumimos o processo de ponta a ponta — do primeiro estudo ate a homologacao
+            na concessionaria.
           </p>
           <ul className="mt-7 space-y-4">
             {checks.map((text) => (
