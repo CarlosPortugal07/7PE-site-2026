@@ -4,18 +4,18 @@ import { useInView } from '../hooks/useInView';
 const painPoints = [
   {
     icon: FileText,
-    title: 'Conta alta e pouca previsibilidade',
-    desc: 'Avaliamos o histórico de consumo para dimensionar o sistema sem exagerar potência nem subestimar necessidade.',
+    title: 'Economia mensal garantida',
+    desc: 'Calculamos o retorno real do seu investimento com base no consumo historico. Voce sabe quanto vai economizar antes de assinar qualquer contrato.',
   },
   {
     icon: Home,
-    title: 'Dúvida sobre telhado e instalação',
-    desc: 'Antes da proposta final, analisamos espaço, orientação, sombreamento e condições elétricas do imóvel.',
+    title: 'Projeto tecnico, nao improvisacao',
+    desc: 'Analisamos telhado, orientacao solar, sombreamento e rede eletrica. Cada detalhe importa para garantir a performance do sistema.',
   },
   {
     icon: Handshake,
-    title: 'Medo de comprar errado',
-    desc: 'Explicamos equipamentos, garantias, prazos e homologação em linguagem direta, para você comparar sem pressão.',
+    title: 'Decisao segura e transparente',
+    desc: 'Voce recebe proposta clara sobre equipamentos, garantias, cronograma e homologacao. Nada de surpresas depois da venda.',
   },
 ];
 
@@ -29,12 +29,11 @@ export default function PainPoints() {
           <span className="icon-box !w-7 !h-7 !mb-0 !text-sm">⚡</span> Para quem a proposta faz sentido
         </p>
         <h2 className="section-title">
-          Energia solar precisa ser uma decisão técnica e financeira.
+          Energia solar nao e gasto. E investimento.
         </h2>
         <p className="section-lead">
-          O cliente que ainda não conhece a Portugal Engenharia não precisa acreditar em
-          promessas genéricas. Precisa enxergar método, clareza e responsabilidade desde a
-          primeira conversa.
+          Todo bom investidor busca seguranca e rentabilidade. Nao vendemos "placas no telhado" —
+          entregamos um projeto que gera economia real, previsibilidade mensal e valorizacao do seu patrimônio.
         </p>
 
         <div className="grid md:grid-cols-3 gap-5 mt-9">
