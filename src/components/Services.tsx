@@ -32,8 +32,9 @@ export default function Services() {
         <p className="eyebrow">🔧 O que entregamos</p>
         <h2 className="section-title">Do estudo inicial à ativação do sistema.</h2>
         <p className="section-lead">
-          A página vende energia solar, mas também posiciona a Portugal Engenharia para
-          serviços elétricos complementares que aumentam confiança e ticket médio.
+          Da analise inicial ate a conexao com a rede, conduzimos cada etapa com
+          responsabilidade tecnica e transparencia contratual — sem terceirizar decisoes
+          criticas para o cliente.
         </p>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-9">

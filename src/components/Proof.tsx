@@ -26,9 +26,9 @@ export default function Proof() {
           Confiança construída com marca, método e responsabilidade técnica.
         </h2>
         <p className="section-lead !text-[#dce8f1]">
-          Quando ainda não há instalações solares para mostrar, a credibilidade precisa vir
-          do que é verificável: empresa formal, marca registrada no INPI, processo claro e
-          decisões técnicas documentadas.
+          Cada projeto é conduzido com a mesma responsabilidade: empresa formal com CNPJ
+          ativo, marca registrada no INPI, escopo definido antes da assinatura e
+          acompanhamento técnico até a ativação do sistema.
         </p>
 
         <div className="grid md:grid-cols-3 gap-5 mt-9">
