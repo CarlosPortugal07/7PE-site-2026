@@ -29,7 +29,7 @@ export default function PainPoints() {
           <span className="icon-box !w-7 !h-7 !mb-0 !text-sm">⚡</span> Para quem a proposta faz sentido
         </p>
         <h2 className="section-title">
-          Energia solar nao e gasto. E investimento.
+          Energia solar não é gasto. É investimento!
         </h2>
         <p className="section-lead">
           Todo bom investidor busca seguranca e rentabilidade. Nao vendemos "placas no telhado" —

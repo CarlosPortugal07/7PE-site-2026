@@ -24,8 +24,8 @@ const faqs = [
     a: 'A Portugal Engenharia conduz a documentação técnica e acompanha o processo junto à concessionária dentro do escopo contratado.',
   },
   {
-    q: 'Vocês ainda não têm cases solares?',
-    a: 'A carteira fotovoltaica está em formação. Por isso o site não usa depoimentos ou números inventados. A confiança é construída por transparência técnica e atendimento próximo.',
+    q: 'E depois da instalacao, fico por minha conta?',
+    a: 'Nao. Acompanhamos a ativacao do sistema, orientamos sobre o monitoramento e ficamos disponiveis para esclarecer qualquer duvida tecnica no pos-obra. O relacionamento nao termina com a entrega.',
   },
 ];
 
