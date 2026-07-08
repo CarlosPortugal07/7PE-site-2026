@@ -17,7 +17,7 @@ export default function Brands() {
   const { ref, isInView } = useInView();
 
   return (
-    <section className="py-20">
+    <section className="py-24">
       <div ref={ref} className="w-[min(1160px,calc(100%-32px))] mx-auto">
         <p className="eyebrow">🏭 Equipamentos conhecidos no mercado</p>
         <h2 className="section-title">
@@ -29,23 +29,43 @@ export default function Brands() {
         </p>
 
         <div
-          className={`grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 mt-8 ${
+          className={`grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-5 mt-11 ${
             isInView ? 'animate-fade-in' : 'opacity-0'
           }`}
           aria-label="Exemplos de marcas do setor fotovoltaico"
         >
-          {brands.map((b) => (
-            <div
+          {brands.map((b, i) => (
+            <article
               key={b.name}
-              className="min-h-[72px] flex items-center justify-center p-3 rounded-lg bg-white border border-line transition-all hover:shadow-md hover:-translate-y-0.5"
+              className={`group relative min-h-[80px] flex items-center justify-center p-4 rounded-xl transition-all duration-500 ease-out ${
+                isInView ? 'animate-fade-up' : 'opacity-0'
+              }`}
+              style={{
+                animationDelay: `${i * 0.06}s`,
+                background: 'linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.7) 100%)',
+                boxShadow: '0 2px 12px rgba(16,35,63,0.04)',
+                border: '1px solid rgba(16,35,63,0.06)',
+              }}
             >
+              <div
+                className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                style={{
+                  background: 'linear-gradient(135deg, rgba(47,187,177,0.08) 0%, rgba(242,170,46,0.05) 100%)',
+                }}
+              />
               <img
                 src={b.img}
                 alt={b.name}
-                className="max-h-[42px] w-auto object-contain"
+                className="relative z-10 max-h-[44px] w-auto object-contain transition-all duration-300 group-hover:scale-105"
                 loading="lazy"
               />
-            </div>
+              <div
+                className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+                style={{
+                  boxShadow: '0 12px 32px rgba(16,35,63,0.1), 0 4px 8px rgba(16,35,63,0.06)',
+                }}
+              />
+            </article>
           ))}
         </div>
       </div>

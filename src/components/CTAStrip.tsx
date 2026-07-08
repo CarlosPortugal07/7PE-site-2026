@@ -14,9 +14,29 @@ export default function CTAStrip() {
   };
 
   return (
-    <section className="bg-gold py-9" ref={ref}>
+    <section className="relative py-11 overflow-hidden" ref={ref}>
       <div
-        className={`w-[min(1160px,calc(100%-32px))] mx-auto flex flex-col md:flex-row items-center justify-between gap-5 ${
+        className="absolute inset-0"
+        style={{
+          background: 'linear-gradient(135deg, #f2aa2e 0%, #fac049 50%, #f2aa2e 100%)',
+        }}
+      />
+      <div
+        className="absolute inset-0 opacity-20"
+        style={{
+          background: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.15\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")',
+        }}
+      />
+      <div
+        className="absolute top-[-50%] right-[-10%] w-[400px] h-[400px] rounded-full opacity-30"
+        style={{
+          background: 'radial-gradient(circle, rgba(255,255,255,0.4) 0%, transparent 70%)',
+          filter: 'blur(40px)',
+        }}
+      />
+
+      <div
+        className={`relative z-10 w-[min(1160px,calc(100%-32px))] mx-auto flex flex-col md:flex-row items-center justify-between gap-6 ${
           isInView ? 'animate-fade-up' : 'opacity-0'
         }`}
       >
@@ -27,7 +47,7 @@ export default function CTAStrip() {
           >
             Vamos descobrir se seu imóvel tem um bom projeto solar?
           </h2>
-          <p className="mt-2 text-[#493009]">
+          <p className="mt-3 text-[#493009] text-lg">
             Envie sua conta de luz e receba uma primeira análise da Portugal Engenharia
             Elétrica.
           </p>
@@ -36,7 +56,7 @@ export default function CTAStrip() {
           href={WHATSAPP_CTA}
           target="_blank"
           rel="noopener noreferrer"
-          className="btn btn-dark shrink-0"
+          className="btn btn-dark shrink-0 shadow-xl shadow-navy/30 transition-transform duration-300 hover:scale-105"
           onClick={() => trackClick('cta_strip_whatsapp')}
         >
           <MessageCircle size={18} />

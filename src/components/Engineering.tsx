@@ -11,19 +11,33 @@ export default function Engineering() {
   const { ref, isInView } = useInView();
 
   return (
-    <section className="py-20">
-      <div ref={ref} className="w-[min(1160px,calc(100%-32px))] mx-auto grid md:grid-cols-[0.9fr_1.1fr] gap-10 items-center">
+    <section className="py-24 relative">
+      <div ref={ref} className="w-[min(1160px,calc(100%-32px))] mx-auto grid md:grid-cols-[0.9fr_1.1fr] gap-12 items-center">
         <div
-          className={`rounded-lg overflow-hidden shadow-lg aspect-[4/3] bg-line ${
+          className={`relative group ${
             isInView ? 'animate-fade-in' : 'opacity-0'
           }`}
         >
-          <img
-            src="https://images.pexels.com/photos/983742/pexels-photo-983742.jpeg?auto=compress&cs=tinysrgb&w=800"
-            alt="Painéis solares instalados sobre telhado"
-            className="w-full h-full object-cover"
-            loading="lazy"
+          <div className="absolute -inset-4 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+            style={{
+              background: 'linear-gradient(135deg, rgba(47,187,177,0.15) 0%, rgba(242,170,46,0.15) 100%)',
+              filter: 'blur(24px)',
+            }}
           />
+          <div
+            className={`relative rounded-2xl overflow-hidden aspect-[4/3] bg-line transition-transform duration-500 group-hover:scale-[1.02]`}
+            style={{
+              boxShadow: '0 24px 48px rgba(16,35,63,0.15), 0 8px 16px rgba(16,35,63,0.1)',
+            }}
+          >
+            <img
+              src="https://images.pexels.com/photos/983742/pexels-photo-983742.jpeg?auto=compress&cs=tinysrgb&w=800"
+              alt="Painéis solares instalados sobre telhado"
+              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+              loading="lazy"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-navy/20 via-transparent to-transparent" />
+          </div>
         </div>
 
         <div className={isInView ? 'animate-slide-right' : 'opacity-0'}>
@@ -37,11 +51,19 @@ export default function Engineering() {
             Assumimos o processo de ponta a ponta — do primeiro estudo ate a homologacao
             na concessionaria.
           </p>
-          <ul className="mt-7 space-y-4">
-            {checks.map((text) => (
-              <li key={text} className="flex gap-3 items-start text-ink">
-                <CheckCircle2 size={20} className="text-mint-700 mt-1 shrink-0" />
-                <span>{text}</span>
+          <ul className="mt-8 space-y-5">
+            {checks.map((text, i) => (
+              <li
+                key={text}
+                className="flex gap-4 items-start text-ink group/item"
+                style={{
+                  transitionDelay: `${i * 0.1}s`,
+                }}
+              >
+                <span className="w-6 h-6 rounded-full bg-mint-50 flex items-center justify-center shrink-0 mt-0.5 transition-all duration-300 group-hover/item:bg-mint-100 group-hover/item:scale-110">
+                  <CheckCircle2 size={14} className="text-mint-700" />
+                </span>
+                <span className="text-[0.98rem] leading-relaxed">{text}</span>
               </li>
             ))}
           </ul>
